@@ -34,7 +34,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Vite Docs
+            hay que aprender petes !!
           </a>
         </p>
       </header>
