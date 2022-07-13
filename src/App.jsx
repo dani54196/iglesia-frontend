@@ -2,18 +2,26 @@ import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
 
-import Navigation from "./lib/Navigation";
+import Nav from "./components/navigation/Nav";
 
-import Home from "./pages/home/Home"
-import Finance from "./pages/finance/Finance"
+import Home from "./pages/home/Home";
+import Members from "./pages/members/Members";
+import Groups from "./pages/groups/Groups";
+import Finance from "./pages/finance/Finance";
+import School from "./pages/school/School";
+import Setting from "./pages/school/School";
 
 function App() {
   return (
     <div className="App">
-      <Navigation />
+      <Nav />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/finance" element={<Finance/>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/groups" element={<Groups />} />
+        <Route path="/finance" element={<Finance />} />
+        <Route path="/school" element={<School />} />
+        <Route path="/setting" element={<Setting />} />
       </Routes>
     </div>
   );
