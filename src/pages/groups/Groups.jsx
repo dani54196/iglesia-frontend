@@ -2,7 +2,7 @@ import React from 'react'
 
 function Groups() {
   return (
-    <div>Groups</div>
+    <div>Groups asd asd asd asd as</div>
   )
 }
 

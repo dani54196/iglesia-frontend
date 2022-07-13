@@ -1,30 +1,38 @@
-import "./App.css";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet";
+import { ThemeProvider } from "styled-components";
+import Layout from "./components/Layout/Layout";
+import Routes from "./Routes";
+import { GlobalStyle } from "./styles/globalStyles";
+import { darkTheme, lightTheme } from "./styles/theme";
 
-import { Routes, Route } from "react-router-dom";
+export const ThemeContext = React.createContext(null);
 
-import Nav from "./components/navigation/Nav";
+const App = () => {
+  const [theme, setTheme] = useState("light");
+  const themeStyle = theme === "light" ? lightTheme : darkTheme;
 
-import Home from "./pages/home/Home";
-import Members from "./pages/members/Members";
-import Groups from "./pages/groups/Groups";
-import Finance from "./pages/finance/Finance";
-import School from "./pages/school/School";
-import Setting from "./pages/school/School";
-
-function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/members" element={<Members />} />
-        <Route path="/groups" element={<Groups />} />
-        <Route path="/finance" element={<Finance />} />
-        <Route path="/school" element={<School />} />
-        <Route path="/setting" element={<Setting />} />
-      </Routes>
-    </div>
+    <ThemeContext.Provider value={{ setTheme, theme }}>
+      <ThemeProvider theme={themeStyle}>
+        <GlobalStyle />
+        <Helmet>
+          <title>Sidebar - Code Focus</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <>
+          <Layout>
+            <Routes />
+          </Layout>
+        </>
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
-}
+};
 
 export default App;
