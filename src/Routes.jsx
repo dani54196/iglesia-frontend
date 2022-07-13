@@ -6,7 +6,7 @@ import Members from "./pages/members/Members";
 import Groups from "./pages/groups/Groups";
 import Finance from "./pages/finance/Finance";
 import School from "./pages/school/School";
-import Setting from "./pages/school/School";
+import Setting from "./pages/setting/Settings";
 
 const Routes = () => {
   return (
