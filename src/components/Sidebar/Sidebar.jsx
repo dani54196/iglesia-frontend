@@ -76,7 +76,7 @@ const Sidebar = () => {
       ))}
       <SDivider />
       <STheme>
-        {sidebarOpen && <SThemeLabel>Dark Mode</SThemeLabel>}
+        {sidebarOpen && <SThemeLabel>Modo Oscuro</SThemeLabel>}
         <SThemeToggler
           isActive={theme === "dark"}
           onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
@@ -90,45 +90,45 @@ const Sidebar = () => {
 
 const linksArray = [
   {
-    label: "Home",
+    label: "Inicio",
     icon: <AiOutlineHome />,
     to: "/",
     notification: 0,
   },
   {
-    label: "Members",
+    label: "Miembros",
     icon: <BsPeople />,
     to: "/members",
     notification: 0,
   },
   {
-    label: "Groups",
+    label: "Grupos",
     icon: <AiOutlineApartment />,
     to: "/groups",
     notification: 1,
   },
   {
-    label: "Finance",
+    label: "Finanzas",
     icon: <MdOutlineAnalytics />,
     to: "/finance",
     notification: 3,
   },
   {
-    label: "School",
+    label: "Escuelas",
     icon: <MdOutlineSchool />,
     to: "/school",
-    notification: 3,
+    notification: 1,
   },
 ];
 
 const secondaryLinksArray = [
   {
-    label: "Settings",
+    label: "Configuracion",
     icon: <AiOutlineSetting />,
     to: "/setting",
   },
   {
-    label: "Logout",
+    label: "Salir",
     icon: <MdLogout />,
   },
 ];

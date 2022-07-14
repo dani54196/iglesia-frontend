@@ -1,8 +1,13 @@
 import React from 'react'
+import { Container, Membresias } from './Members.elements'
 
 function Members() {
   return (
-    <div>Members</div>
+    <Container>
+      <Membresias>
+        Miembros
+      </Membresias>
+    </Container>
   )
 }
 

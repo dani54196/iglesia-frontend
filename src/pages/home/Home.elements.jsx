@@ -8,7 +8,6 @@ export const Software = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-  background-color: #ddd;
   padding: 1rem 2rem;
 
   h1,
@@ -24,23 +23,30 @@ export const InfoMain = styled.div`
   text-align: center;
 
   @media screen and (max-width: 970px) {
-    display: inline;
+    display: block;
   }
 `;
 
 export const InfoIglesia = styled.div`
-  background: #999;
+  p {
+    margin: 5px;
+  }
 `;
 
 export const Panel = styled.div`
   p {
     margin: 5px;
     padding: 1rem;
-    background: #f11;
+    background: #ff4040;
+    color: #000;
   }
 `;
 
 export const InfoGeneral = styled.div`
   width: 100%;
+  background-color: #cdcdcd;
+  color: #000;
+  display: inline-block;
+  padding: 2rem;
   text-align: center;
 `;
