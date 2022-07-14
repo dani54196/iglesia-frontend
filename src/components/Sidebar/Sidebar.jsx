@@ -67,7 +67,7 @@ const Sidebar = () => {
       ))}
       <SDivider />
       {secondaryLinksArray.map(({ icon, label, to }) => (
-        <SLinkContainer key={label} isActive={pathname === to}>
+        <SLinkContainer key={label}>
           <SLink to={to} style={!sidebarOpen ? { width: `fit-content` } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
             {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
